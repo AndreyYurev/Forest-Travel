@@ -1,0 +1,27 @@
+.button {
+	display: inline-block;
+	height: 50px;
+	padding: 0px 40px;
+	background: #0ac883;
+	box-shadow: 0px 8px 20px rgba(24, 219, 148, 0.35);
+	border-radius: 50px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	color: #ffffff;
+	transition: 0.1s ease-in;
+	border: none;
+	cursor: pointer;
+	outline: none;
+
+	&:hover {
+		background: #099461;
+		box-shadow: 0px 8px 20px rgba(17, 145, 98, 0.35);
+	}
+	
+	&:focus{
+		background: #099461;
+		box-shadow: 0px 8px 20px rgba(17, 145, 98, 0.35);
+	}
+}

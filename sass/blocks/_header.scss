@@ -1,0 +1,106 @@
+.header {
+	height: 800px;
+	padding-top: 50px;
+	position: relative;
+	background-color: #265847;
+	background-image: url("../img/index/header-bg.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #fff;
+}
+
+.header--inner {
+	display: flex;
+	align-items: center;
+	height: 100px;
+	background-color: #265847;
+	background-image: url("../img/tours/header-bg.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #fff;
+}
+
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1170px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header__nav {
+	font-size: 22px;
+}
+.header__nav-list {
+	display: flex;
+}
+.header__nav-button {
+	display: none;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+.header__nav-item:not(:last-child) {
+	margin-right: 50px;
+}
+.header__nav-link {
+	color: #ffffff;
+	transition: 0.1s ease-in;
+
+	&:hover {
+		color: rgb(245, 99, 53);
+	}
+
+	&:focus{
+		outline: none;
+		color: rgb(245, 99, 53);
+	}
+}
+.header__title-block {
+	width: 1170px;
+	position: absolute;
+	top: 51.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.header__title {
+	margin-bottom: 29px;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 1;
+}
+.header__title-block p {
+	font-size: 24px;
+}
+
+.header__scroll {
+	display: inline-block;
+	padding-bottom: 34px;
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 16px;
+	text-align: center;
+	transition: opacity 0.1s ease-in;
+}
+.header__scroll:hover,
+.header__scroll:focus {
+	outline: none;
+	opacity: 0.85;
+}
+.header__scroll::after {
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+	background-image: url("../img/icons/arrow-down.svg");
+}

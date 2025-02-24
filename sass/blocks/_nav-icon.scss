@@ -1,0 +1,92 @@
+// Ширина и высота линии в иконке
+$lineWidth: 32px;
+$lineHeight: 4px;
+$borderRadius: 2px;
+$lineMargin: 5px;
+$color: rgb(255, 255, 255);
+
+// Размеры контейнера
+$width: 38px;
+$height: 38px;
+
+.nav-icon {
+   width: $width;
+   height: $height;
+
+   display: flex;
+	justify-content: center;
+	align-items: center;
+
+   cursor: pointer;
+
+	border: none;
+	transition: background-color 0.2s ease-in-out;
+
+	&:hover {
+		.nav-icon__middle,
+		.nav-icon__middle::before, 
+		.nav-icon__middle::after {
+			background-color: rgb(245, 99, 53);;
+		}
+	}
+	&:focus{
+		.nav-icon__middle,
+		.nav-icon__middle::before, 
+		.nav-icon__middle::after {
+			background-color: rgb(245, 99, 53);;
+		}
+	}
+}
+
+.nav-icon__middle {
+	flex-shrink: 0;
+	flex-grow: 0;
+   position: relative;
+   width: $lineWidth;
+   height: $lineHeight;
+   background-color: $color;
+	border-radius: $borderRadius;
+	transition: background-color 0.2s ease-in-out;
+
+   &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: $lineWidth;
+      height: $lineHeight;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s, background-color 0.2s ease-in-out;
+      background-color: $color;
+		border-radius: $borderRadius;
+   }
+
+   &::before {
+      top: -($lineHeight + $lineMargin);
+   }
+
+   &::after {
+      top: $lineHeight + $lineMargin;
+   }
+}
+
+/* Active state */
+.nav-icon.nav-icon--active{
+	position: fixed;
+	right: 15px;
+	z-index: 999;
+}
+.nav-icon.nav-icon--active .nav-icon__middle {
+   background-color: transparent;
+
+   &::before, &::after {
+      top: 0;
+      transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+   }
+
+   &::before {
+      transform: rotate(45deg);
+   }
+
+   &::after {
+      transform: rotate(-45deg);
+   }
+}

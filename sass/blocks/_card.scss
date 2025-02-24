@@ -1,0 +1,71 @@
+.card-link {
+	display: block;
+	transition: opacity 0.1s ease-in-out;
+
+	&:hover{
+	opacity: 0.9;
+	}
+	&:focus{
+		outline: none;
+		opacity: 0.9;
+	}
+}
+.card-link > .card--small {
+	height: 100%;
+}
+.cards-row__column:last-child .card-link {
+	height: 100%;
+}
+
+.card {
+	width: 570px;
+	display: flex;
+	flex-direction: column;
+}
+.card img {
+	object-fit: cover;
+	height: 100%;
+}
+.card--big {
+	width: 670px;
+}
+.card--small {
+	width: 470px;
+}
+.card-title-wrapper {
+	margin-top: auto;
+	flex-shrink: 0;
+	height: 80px;
+	padding: 0px 30px;
+	display: flex;
+	align-items: center;
+	/* запрет переноса строки обёртки*/
+	overflow: hidden;
+	white-space: nowrap;
+}
+.card-title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 36px;
+	color: #ffffff;
+	/* запрет переноса строки заголовка*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+/* модификаторы фона для карточек */
+.card-free-tours {
+	background-color: #a6a6a6;
+}
+.card-extreme {
+	background-color: #c1b19b;
+}
+.card-adventures {
+	background-color: #66b0be;
+}
+.card-trekking {
+	background-color: #876f56;
+}
+.card-jungle {
+	background-color: #27695e;
+}

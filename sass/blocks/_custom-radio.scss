@@ -1,0 +1,42 @@
+.real-radio,
+.real-checkbox {
+	width: 0;
+	height: 0;
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+	appearance: none;
+}
+.custom-radio {
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+	display: inline-block;
+	flex-shrink: 0;
+	vertical-align: bottom;
+	position: relative;
+	background: #eeeeee;
+	border: 1px solid #c0c0c0;
+	border-radius: 50%;
+	transition: border 0.1s ease-in;
+}
+
+.real-radio:focus+.custom-radio{
+	border: 2px solid #0ac883;
+}
+.custom-radio::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 12px;
+	height: 12px;
+	transform: translate(-50%, -50%) scale(0);
+	background: #2ab698;
+	border-radius: 50%;
+	transition: 0.1s ease-in-out;
+}
+.real-radio:checked + .custom-radio::before {
+	transform: translate(-50%, -50%) scale(1);
+}

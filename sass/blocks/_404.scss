@@ -1,0 +1,21 @@
+.inner-page-404{
+   font-size: 20px;
+   line-height: 1.6;
+   color: #31405b;
+}
+
+.link-404 {
+	text-decoration: underline;
+	color: #138ece;
+	transition: color 0.1s ease-in;
+
+
+	&:hover{
+		color: rgb(245, 99, 53);
+	}
+	
+	&:focus{
+		outline: none;
+		color: rgb(245, 99, 53);
+	}
+}

@@ -1,0 +1,15 @@
+.logo {
+	font-family: "Lobster", cursive;
+	font-size: 40px;
+	color: #ffffff;
+	transition: color 0.1s ease-in;
+
+	&:hover{
+		color: rgb(245, 99, 53);
+	}
+
+	&:focus{
+		outline: none;
+		color: rgb(245, 99, 53);
+	}
+}

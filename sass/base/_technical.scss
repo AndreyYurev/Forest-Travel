@@ -1,0 +1,28 @@
+/* Технический класс */
+.none {
+	display: none;
+}
+.bgcolor {
+	background-color: #f2f8f6;
+}
+
+#overlay {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.98);
+	
+	@media (min-width: 1200px) {
+		display: none;
+	}
+	z-index: 2;
+}
+.body--noscroll {
+	overflow: hidden;
+
+	@media (min-width: 1200px) {
+		overflow: unset;
+	}
+}
